@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  background: #f23f87;
+  background-image: url('https://iuploads.scribblecdn.net/ffe8e2ab-75f9-4bb4-99d8-d622902e2419/global/imagelib/uncategorized/cover01_ebook_co-mkt_magalu-b9f7012af16340aa5d4eb01f1c11e45cd6a46101.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  width: 100vw;
+}
+
+.align {
+  position: relative;
+  top: 7rem;
+  left: 7rem;
+}
+
+.text {
+  color: #fff;
+  width: 25rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
+
+.text h1 span {
+  font-weight: 800;
+}
+
+[name='chevron-down-outline'] {
+  font-size: 2rem;
+  color: #000;
+}
+
+/*-- DOWNLOAD AREA --*/
+
+.download {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.download ul {
+  list-style: none;
+  display: flex;
+}
+
+.download ul li {
+  margin: 0 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: #f23f87;
+  padding: 1rem;
+  border-radius: 1.8rem;
+  width: 5rem;
+}
+
+.download h3:nth-last-child(1) {
+  color: #fff;
+  background: #000;
+  font-size: 1em;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/*-- TEXT CONTENT AREA --*/
+
+.text-content {
+  background: #f7fafd;
+  padding: 4rem;
+  text-decoration: justify;
+  display: grid;
+  grid-template-areas:
+    'f t'
+    's t';
+}
+
+.text-content span {
+  font-weight: 600;
+}
+
+.text-content div {
+  margin: 1rem;
+}
+
+.text-content div ul li {
+  list-style: none;
+}
+
+.f {
+  grid-area: f;
+}
+
+.s {
+  grid-area: s;
+}
+
+.t {
+  grid-area: t;
+}
+
+/*-- FOOTER --*/
+
+footer {
+  color: #fff;
+  background: #1a202c;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  color: #fff;
+  margin-right: 0.2rem;
+  text-decoration: none;
+}
+
+[name='logo-github'] {
+  margin-right: 0.2rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*-- MEDIA QUERIES --*/
+
+@media (max-width: 768px) {
+  .container {
+    background-image: none;
+  }
+
+  .text-content {
+    grid-template-areas:
+      'f'
+      's'
+      't';
+  }
+}
+
+@media (max-width: 916px) {
+  .download {
+    justify-content: center;
+  }
+
+  .download h3:not(.not),
+  .download ul {
+    display: none;
+  }
+}
